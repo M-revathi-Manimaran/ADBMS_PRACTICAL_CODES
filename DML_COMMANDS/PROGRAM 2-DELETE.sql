@@ -1,2 +1,2 @@
 delete from student
-where student_id = 103;
+where student_id = 102;
