@@ -1,0 +1,5 @@
+ALTER TABLE Student
+ADD Email VARCHAR(100);
+
+ALTER TABLE Student
+DROP COLUMN Email;
