@@ -1,1 +1,1 @@
-RENAME TABLE employees TO employee_details;
+RENAME COLUMN Name TO Student_Name;
