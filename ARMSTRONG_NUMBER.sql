@@ -1,21 +1,23 @@
-DECLARE
-    n NUMBER := &n;
-    temp NUMBER;
-    digit NUMBER;
-    reverse_num NUMBER := 0;
-BEGIN
+declare
+    n number := &n;
+    temp number;
+    digit number;
+    sum number := 0;
+    digits number;
+begin
     temp := n;
+    digits := length(to_char(n));
 
-    WHILE temp > 0 LOOP
-        digit := MOD(temp, 10);
-        reverse_num := (reverse_num * 10) + digit;
-        temp := TRUNC(temp / 10);
-    END LOOP;
+    while temp > 0 loop
+        digit := mod(temp, 10);
+        sum := sum + power(digit, digits);
+        temp := trunc(temp / 10);
+    end loop;
 
-    IF reverse_num = n THEN
-        DBMS_OUTPUT.PUT_LINE(n || ' is a Palindrome Number');
-    ELSE
-        DBMS_OUTPUT.PUT_LINE(n || ' is not a Palindrome Number');
-    END IF;
-END;
+    if sum = n then
+        dbms_output.put_line(n || ' is an Armstrong Number');
+    else
+        dbms_output.put_line(n || ' is not an Armstrong Number');
+    end if;
+end;
 /
