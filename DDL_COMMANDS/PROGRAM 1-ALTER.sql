@@ -1,5 +1,6 @@
-ALTER TABLE Student
-ADD Email VARCHAR(100);
+alter table student
+add phone varchar(15);
 
-ALTER TABLE Student
-DROP COLUMN Email;
+
+alter table student
+drop column phone;
