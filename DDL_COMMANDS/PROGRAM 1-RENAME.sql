@@ -1,1 +1,1 @@
-RENAME TABLE Student TO Students;
+rename student to students;
