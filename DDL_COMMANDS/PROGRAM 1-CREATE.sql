@@ -1,6 +1,6 @@
-CREATE TABLE Student (
-    Student_ID INT PRIMARY KEY,
-    Name VARCHAR(50),
-    Age INT,
-    Department VARCHAR(50)
+create table student (
+    student_id int primary key,
+    name varchar(50),
+    age int,
+    department varchar(50)
 );
