@@ -1,4 +1,3 @@
 update student
-set age = 21
-where student_id = 101;
-
+set age = 22
+where student_id = 103;
