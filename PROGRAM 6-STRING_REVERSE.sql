@@ -1,9 +1,14 @@
-CREATE OR REPLACE PROCEDURE reverse_string(str IN VARCHAR2) IS
-reversed_str VARCHAR2(100) := '';
-len NUMBER := LENGTH(str);
-BEGIN
-FOR i IN REVERSE 1..len LOOP
-reversed_str := reversed_str || SUBSTR(str, i, 1);
-END LOOP;
-DBMS_OUTPUT.PUT_LINE('Reversed String: ' || reversed_str);
-END;
+set serveroutput on;
+
+declare
+    text varchar2(100) := '&text';
+    reverse_text varchar2(100) := '';
+begin
+    for i in reverse 1..length(text) loop
+        reverse_text := reverse_text || substr(text, i, 1);
+    end loop;
+
+    dbms_output.put_line('Given String: ' || text);
+    dbms_output.put_line('Reverse: ' || reverse_text);
+end;
+/
