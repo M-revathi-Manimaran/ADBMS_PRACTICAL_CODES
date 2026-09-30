@@ -1,1 +1,3 @@
-savepoint student_savepoint;
+BEGIN
+    SAVEPOINT s1;
+END;
