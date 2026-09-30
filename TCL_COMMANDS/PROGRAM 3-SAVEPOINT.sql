@@ -1,3 +1,3 @@
 BEGIN
-    SAVEPOINT s1;
+    SAVEPOINT s2;
 END;
