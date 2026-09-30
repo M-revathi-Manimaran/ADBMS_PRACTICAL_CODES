@@ -16,3 +16,4 @@ second:=a;
 dbms_output.put_line(a); 
 end loop; 
 end;
+/
