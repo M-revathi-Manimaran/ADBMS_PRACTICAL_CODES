@@ -1,11 +1,11 @@
-DECLARE 
- n NUMBER := :Enter_Number; 
- f NUMBER := 1; 
-BEGIN 
- 
- WHILE n > 1 LOOP 
- f := f * n; 
- n := n - 1; 
- END LOOP; 
- DBMS_OUTPUT.PUT_LINE('Result: ' || f); 
-END;
+declare
+    n number := &n;
+    fact number := 1;
+begin
+    for i in 1..n loop
+        fact := fact * i;
+    end loop;
+
+    dbms_output.put_line(n || '! = ' || fact);
+end;
+/
