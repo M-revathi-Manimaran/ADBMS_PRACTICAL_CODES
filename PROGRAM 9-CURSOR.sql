@@ -1,15 +1,15 @@
 -- employee table
 
 create table employee (
-    emp_id number,
-    emp_name varchar2(20),
-    department varchar2(20),
+    id number,
+    name varchar2(20),
+    department varchar2(30),
     salary number
 );
 
-insert into employee values (101, 'arun', 'it', 20000);
-insert into employee values (102, 'priya', 'hr', 25000);
-insert into employee values (103, 'kumar', 'sales', 30000);
+insert into employee values (101, 'arun', 'computer', 25000);
+insert into employee values (102, 'priya', 'maths', 28000);
+insert into employee values (103, 'kumar', 'science', 30000);
 
 select * from employee;
 
@@ -23,7 +23,7 @@ begin
     set salary = salary + 1000;
 
     if sql%notfound then
-        dbms_output.put_line('no employees selected');
+        dbms_output.put_line('no employees updated');
     else
         total_rows := sql%rowcount;
         dbms_output.put_line(total_rows || ' employees updated');
@@ -35,14 +35,12 @@ end;
 -- explicit cursor
 
 declare
-    e_id employee.emp_id%type;
-    e_name employee.emp_name%type;
+    e_id employee.id%type;
+    e_name employee.name%type;
     e_dept employee.department%type;
 
     cursor c_employee is
-        select emp_id, emp_name, department
-        from employee;
-
+        select id, name, department from employee;
 begin
     open c_employee;
 
