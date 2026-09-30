@@ -3,4 +3,4 @@ INSERT INTO student2 VALUES (103, 'Kumar');
 
 COMMIT;
 
-SELECT * FROM student1;
+SELECT * FROM student2;
