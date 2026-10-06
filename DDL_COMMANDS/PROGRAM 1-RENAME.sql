@@ -1,1 +1,1 @@
-rename student to students;
+rename student_3 to students;
